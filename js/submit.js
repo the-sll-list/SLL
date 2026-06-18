@@ -1,58 +1,62 @@
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-<meta charset="UTF-8">
-<title>Submit Geometry Dash</title>
-</head>
-<body>
+export default {
+    template: `
+        <main class="page-submit">
+            <div class="meta-container">
+                <div class="meta">
+                    <h1>Submit Record</h1>
 
-<h1>Submit na listę GD</h1>
+                    <p>Nick</p>
+                    <input type="text" v-model="user">
 
-<form id="submitForm">
-    <input type="text" id="nick" placeholder="Nick" required><br><br>
+                    <p>Level Name</p>
+                    <input type="text" v-model="level">
 
-    <input type="text" id="level" placeholder="Nazwa levela" required><br><br>
+                    <p>Video Link</p>
+                    <input type="text" v-model="link">
 
-    <input type="url" id="video" placeholder="Link do filmu" required><br><br>
+                    <p>Percent</p>
+                    <input type="number" v-model="percent">
 
-    <input type="number" id="percent" placeholder="Procent" required><br><br>
+                    <p>Refresh Rate (Hz)</p>
+                    <input type="number" v-model="hz">
 
-    <input type="number" id="fps" placeholder="FPS"><br><br>
+                    <br><br>
+                    <button @click="submit">Submit</button>
+                </div>
+            </div>
+        </main>
+    `,
+    data() {
+        return {
+            user: "",
+            level: "",
+            link: "",
+            percent: 100,
+            hz: 60
+        };
+    },
+    methods: {
+        submit() {
+            const webhook = "https://discord.com/api/webhooks/1517158905250054284/f2Nvq6bIWz-UMLiTsXXuZC1Q2JG_6eSpkP8GQDgnSyhrFXB3RTf1jpmaBd4gfOUlQIEd";
 
-    <textarea id="comment" placeholder="Dodatkowe informacje"></textarea><br><br>
+            fetch(webhook, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    content:
+`📩 New Record Submission
 
-    <button type="submit">Wyślij</button>
-</form>
+👤 Player: ${this.user}
+🎮 Level: ${this.level}
+🎥 Video: ${this.link}
+💯 Percent: ${this.percent}%
+⚡ Hz: ${this.hz}`
+                })
+            });
 
-<script>
-document.getElementById("submitForm").addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    const webhook = "https://discord.com/api/webhooks/1517158905250054284/f2Nvq6bIWz-UMLiTsXXuZC1Q2JG_6eSpkP8GQDgnSyhrFXB3RTf1jpmaBd4gfOUlQIEd";
-
-    const data = {
-        content:
-`📩 Nowy submit!
-
-👤 Nick: ${document.getElementById("nick").value}
-🎮 Level: ${document.getElementById("level").value}
-🎥 Film: ${document.getElementById("video").value}
-💯 Procent: ${document.getElementById("percent").value}
-🖥 FPS: ${document.getElementById("fps").value}
-📝 Info: ${document.getElementById("comment").value}`
-    };
-
-    await fetch(webhook, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(data)
-    });
-
-    alert("Submit wysłany!");
-});
-</script>
-
-</body>
-</html>
+            alert("Record submitted!");
+        }
+    }
+};

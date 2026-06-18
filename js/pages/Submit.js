@@ -1,30 +1,29 @@
 export default {
     template: `
-        <main class="page-submit">
-            <div class="meta-container">
-                <div class="meta">
-                    <h1>Submit Record</h1>
+       template: `
+<main class="page-submit">
+    <div class="submit-box">
+        <h1>Submit Record</h1>
 
-                    <p>Nick</p>
-                    <input type="text" v-model="user">
+        <p>Nick</p>
+        <input type="text" v-model="user">
 
-                    <p>Level Name</p>
-                    <input type="text" v-model="level">
+        <p>Level Name</p>
+        <input type="text" v-model="level">
 
-                    <p>Video Link</p>
-                    <input type="text" v-model="link">
+        <p>Video Link</p>
+        <input type="text" v-model="link">
 
-                    <p>Percent</p>
-                    <input type="number" v-model="percent">
+        <p>Percent</p>
+        <input type="number" v-model="percent">
 
-                    <p>Refresh Rate (Hz)</p>
-                    <input type="number" v-model="hz">
+        <p>Refresh Rate (Hz)</p>
+        <input type="number" v-model="hz">
 
-                    <br><br>
-                    <button @click="submit">Submit</button>
-                </div>
-            </div>
-        </main>
+        <button @click="submit">Submit</button>
+    </div>
+</main>
+`
     `,
     data() {
         return {

@@ -1,1 +1,17 @@
-
+{
+    "id": 127160819,
+    "name": "Kopytko",
+    "author" "Mixer",
+    "creators": [],
+    "verifier": "Mixer",
+    "verification": "https://www.youtube.com/watch?v=CoBZ1TTAnWc",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "szymek",
+            "link": "https://www.youtube.com/watch?v=V7gp90VKlKI",
+            "percent" 100,
+            "hz": 144,
+        }
+    ]
+}   

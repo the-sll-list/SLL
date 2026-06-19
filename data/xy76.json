@@ -1,1 +1,17 @@
-
+{
+    "id": 138202168,
+    "name": "Xy76",
+    "author": "Mixer",
+    "creators": [],
+    "verifier": "Mixer",
+    "verification": "https://www.youtube.com/watch?v=7XeF9ZzZ1y8",
+    "percentToQualify": 100,
+    "records": [
+        {
+            "user": "szymek",
+            "link": "https://www.youtube.com/watch?v=b0Z6HgiMS8k",
+            "percent": 100,
+            "hz": 144
+        }
+    ]
+}   

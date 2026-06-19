@@ -3,7 +3,7 @@ export default {
         <main class="page-submit">
             <div class="meta-container">
                 <div class="meta">
-                    <h1>Submit Record</h1>
+                    <h1>Submit Record (Submit Levels on Discord Server)</h1>
 
                     <p>Nick</p>
                     <input type="text" v-model="user">

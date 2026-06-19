@@ -89,7 +89,7 @@ export default {
                         <p class="type-label-md"><a href="https://tsl.pages.dev/" target="_blank"></a></p>
                     </div>
                     <template v-if="editors">
-                        <h3>List Editors</h3>
+                        <h3>Edytorzy</h3>
                         <ol class="editors">
                             <li v-for="editor in editors">
                                 <img :src="\`/assets/\${roleIconMap[editor.role]}\${store.dark ? '-dark' : ''}.svg\`" :alt="editor.role">

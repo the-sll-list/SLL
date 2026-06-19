@@ -6,22 +6,22 @@
     },
     {
         "role": "admin",
-        "name": "List Admin",
-        "link": "https://www.youtube.com/@Prometheus_Alt"
+        "name": "Mixer",
+        "link": "https://www.youtube.com/@Mixergmd"
     },
     {
         "role": "helper",
-        "name": "List Helper",
+        "name": "",
         "link": "https://www.youtube.com/@Prometheus_Alt"
     },
     {
         "role": "trial",
-        "name": "Trial List Helper",
+        "name": "",
         "link": "https://www.youtube.com/@Prometheus_Alt"
     },
     {
         "role": "dev",
-        "name": "List Coder",
+        "name": "",
         "link": "https://www.youtube.com/@Prometheus_Alt"
     }
 ]

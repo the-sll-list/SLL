@@ -37,7 +37,7 @@ export default {
     },
     methods: {
         submit() {
-            const webhook = "https://discord.com/api/webhooks/1517492673811058769/ezaFpxvNmktNI-qhYLs2YvweQlu8c1_gtg76PyU5RmsP1HY9x9eCIMfJfVeBoTYyzM4v";
+            const webhook = "https://discord.com/api/webhooks/1519029522605805618/iAL5ChlmWRr3nE99op8TDdiyZW3pqteomFJZ1N0o72_sNhO5QOdiVgXiorjPQZe6CNWI";
 
             fetch(webhook, {
                 method: "POST",
